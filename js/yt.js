@@ -1,4 +1,4 @@
-
+alert(1);
 var temp = function(pop) {
 	var obj = {
 		winOpener : null,
