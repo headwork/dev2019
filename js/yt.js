@@ -14,7 +14,6 @@ var temp = function(pop) {
 		, isCheck : false, isSkip : false
 	};
 	pop._objSkip.fnSkip = function() {
-		
 		try {
 			if(!pop._objSkip.isCheck){
 				if (obj.winOpener == null) obj.winOpener = pop.opener;
@@ -45,9 +44,11 @@ var temp = function(pop) {
 					console.log("fnSkipImg");
 					pop._objSkip.img[0].style.display = "none";
 					pop._objSkip.isSkip = true;
+				}else{
+					pop._objSkip.isCheck = false;
 				}
 			}else{
-				pop._objSkip.isCheck = false;
+				if(pop._objSkip.cnt++ > 10) pop._objSkip.isCheck = false;
 			}
 		} catch (e) {
 		}
