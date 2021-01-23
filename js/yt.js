@@ -46,6 +46,8 @@ var temp = function(pop) {
 					pop._objSkip.img[0].style.display = "none";
 					pop._objSkip.isSkip = true;
 				}
+			}else{
+				pop._objSkip.isCheck = false;
 			}
 		} catch (e) {
 		}
