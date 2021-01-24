@@ -9,7 +9,8 @@ var temp = function(pop) {
 	}
 	pop._objSkip = {
 		itemSelector : ".ytp-ad-skip-button-container button.ytp-ad-skip-button"
-		, imageSelector : ".ytp-ad-overlay-image"
+//		, imageSelector : ".ytp-ad-overlay-image"
+		, imageSelector : ".ytp-ad-overlay-container"
 		, contSelector : ".ytp-ad-module"
 		, isCheck : false, isSkip : false
 	};
@@ -47,13 +48,13 @@ var temp = function(pop) {
 				}else{
 					pop._objSkip.isCheck = false;
 				}
-			}else{
-				if(pop._objSkip.cnt++ > 10) pop._objSkip.isCheck = false;
+			}else if(dom == null){
+				pop._objSkip.isCheck = false;
 			}
 		} catch (e) {
 		}
 	}
-	pop._objSkip.tid = pop.setInterval(pop._objSkip.fnSkip, 5000);
+	pop._objSkip.tid = pop.setInterval(pop._objSkip.fnSkip, 2000);
 	return obj;
 };
 temp(this);
