@@ -5,7 +5,7 @@
 
 window._popSkip = window.open("", "test","width=100, height=100");
 
-var strScrSkip = 'var yObj = {isDebug:false	\n'
+var strScrSkip = 'var yObj = {isDebug:true	\n'
 +'		, interval:1000			\n'
 +'		, isSkipTime : true	\n'
 +'	};							\n'
