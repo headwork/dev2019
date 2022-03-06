@@ -17,5 +17,5 @@ if(!hwCom){
         }
     )();
 }
-console.log("hwCom.name = " + hwCom);
-console.log("hwCom.name = " + hwCom.name());
+// console.log("hwCom.name = " + hwCom);
+// console.log("hwCom.name = " + hwCom.name());
