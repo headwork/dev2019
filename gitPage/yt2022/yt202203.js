@@ -74,7 +74,7 @@ if(!_skip){
         }
 
         let strScript = 'var s = document.createElement("script");'
-                    + '\ns.type = "text/javascript";s.src = "http://127.0.0.1:5500/ytPopOpen.js";'
+                    + '\ns.type = "text/javascript";s.src = "'+ytAdPath+'/gitPage/yt2022/ytPopOpen.js";'
                     + '\ns.popWinName = "ytSkip22";    /* 팝업창명 */'
                     + '\ndocument.head.appendChild(s);';
 
