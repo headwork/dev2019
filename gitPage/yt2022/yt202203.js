@@ -1,4 +1,7 @@
 var count = 0;
+if(ytAdPath == null){
+    var ytAdPath = opener.ytAdPath;
+}
 if(!_skip){
     var _skip = {
         isDebug : false
@@ -120,4 +123,4 @@ _skip.fnSkip = function (){
 
 _skip.fnStart();
 
-
+console.log(ytAdPath);

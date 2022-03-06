@@ -2,39 +2,37 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My test page</title>
-    <script src="/gitPage/js/ytcom.js"></script>
+    <title>ad skip</title>
+    <script src="./js/ytcom.js"></script>
     <script type="text/javascript">
         var count = "";
+        var contextPath = location.href.substring(0, location.href.indexOf("gitPage")-1);
+        
+        console.log("contextPath =" + contextPath);
         function fnSkip(){
             console.log("count =" + count++);
         }
         function init(){
-            console.log("hwCom.getContextPath1 = " + hwCom.getContextPath());
-
             var s = document.createElement("script");
             s.type = "text/javascript";
             s.popWinName = "ytSkip22";
             // s.src = "https://headwork.github.io/dev2019/js/yt01.js";
             // s.src = "http://127.0.0.1:5500/yt202203.js";
 //             s.src = hwCom.getContextPath()) + "http://127.0.0.1:5500/ytPopOpen.js?temp=111";
-            s.src = hwCom.getContextPath() + "/gitPage/yt2022/ytPopOpen.js?temp=111";
+            s.src = contextPath + "/gitPage/yt2022/ytPopOpen.js?temp=111";
             document.head.appendChild(s);
             taScript.textContent = 'var s = document.createElement("script");'
-            	+ 's.type = "text/javascript";s.src = ' + hwCom.getContextPath() + '"/gitPage/yt2022/ytPopOpen.js";'
-            	+ 's.popWinName = "ytSkip22";    /* 팝업창명 */'
-            	+ 'document.head.appendChild(s);';
+            	+ '\ns.type = "text/javascript";s.src = ' + contextPath + '/gitPage/yt2022/ytPopOpen.js";'
+            	+ '\ns.popWinName = "ytSkip22";    /* 팝업창명 */'
+            	+ '\ndocument.head.appendChild(s);';
             // window.setInterval(fnSkip, 1000);
         }
     </script>
   </head>
-  <body onload="init();">
+  <body onload="init()" onloadstart="init()">
     
     <div class="event-log">
-    <label>Event log:</label><br>
-    <button id="btn01">시작</button><button id="btn02">멈춤</button><button id="btn03">로그</button><button id="btn04">정보</button><br>
-    <textarea it="taScript" readonly class="event-log-contents" style="width:100%;height:120px;">
-    </textarea>
+    <textarea id="taScript" readonly class="event-log-contents" style="width:100%;height:120px;"></textarea>
     </div>
   </body>
 </html>
