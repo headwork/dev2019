@@ -3,14 +3,16 @@ if(ytAdPath == null){
     var ytAdPath = opener.ytAdPath;
 }
 if(!_skip){
+    // 스킵모듈
     var _skip = {
-        isDebug : false
-        , timeout : 3000
+        isDebug : false     //디버그 모드
+        , timeout : 1000    //반복실행
     };
     (function(){
         _skip.eleLog = null;
         let eleBtn01 = null;let eleBtn02 = null;let eleBtn03 = null;let eleBtn04 = null;
 
+        // 옵저버 기능 작동안함
         let watch = {
             // 옵저버 설정 자식이 변경되는 경우
             config : {childList: true}
@@ -63,6 +65,7 @@ if(!_skip){
                 console.log(strLog);
             }
         }
+
         // 반복실행 멈춤
         let _queryAdObject = "button.ytp-ad-skip-button, button.ytp-ad-overlay-close-button";
         _skip.fnAdSkip = function(){
@@ -103,9 +106,7 @@ _skip.fnObserver = function (){
     _skip.getObserver().observe(target);
 }
 
-_skip.fnCheck = function (){
-    _skip.fnLog("로그 = " + count++);
-}
+
 _skip.fnSkip = function (){
     if(opener == null){
         _skip.fnLog("부모창이 없습니다.", true);
@@ -114,13 +115,6 @@ _skip.fnSkip = function (){
     }
     
     _skip.fnAdSkip();
-    // if(_skip.fnCheck){
-    //     _skip.fnCheck();
-    //     return;
-    // }
-    // _skip.fnLog("로그 = " + count++);
 }
 
 _skip.fnStart();
-
-console.log(ytAdPath);
