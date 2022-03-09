@@ -22,7 +22,7 @@
             s.src = contextPath + "/gitPage/yt2022/ytPopOpen.js?temp=111";
             document.head.appendChild(s);
             taScript.textContent = 'var s = document.createElement("script");'
-            	+ '\ns.type = "text/javascript";s.src = ' + contextPath + '/gitPage/yt2022/ytPopOpen.js";'
+            	+ '\ns.type = "text/javascript";s.src = "' + contextPath + '/gitPage/yt2022/ytPopOpen.js";'
             	+ '\ns.popWinName = "ytSkip22";    /* 팝업창명 */'
             	+ '\ndocument.head.appendChild(s);';
             // window.setInterval(fnSkip, 1000);
@@ -33,6 +33,9 @@
     <div class="event-log">
       <span>광고제거</span>
       <textarea id="taScript" readonly class="event-log-contents" style="width:100%;height:120px;"></textarea>
+      <span>1. F12클릭</span><br>
+      <span>2. 광고 스크립트 콘솔에 붙여넣기</span>
+      <img src="./img/page01.png" border="0" width="300" alt="">
     </div>
   </body>
 </html>
