@@ -4,11 +4,5 @@ public class Test {
 
 	public static void main(String[] args) {
 		System.out.println("hello1");
-<<<<<<< HEAD
-		System.out.println("hello3");
-		//병합처리
-		System.out.println("hello3");
-=======
->>>>>>> refs/remotes/origin/master
 	}
 }
