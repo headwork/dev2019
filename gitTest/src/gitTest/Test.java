@@ -6,5 +6,6 @@ public class Test {
 		System.out.println("hello1");
 		System.out.println("hello3");
 		//병합처리
+		System.out.println("hello3");
 	}
 }
