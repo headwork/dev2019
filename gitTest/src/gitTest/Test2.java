@@ -6,5 +6,6 @@ public class Test2 {
 		System.out.println("hello운영 업데이트");
 		System.out.println("hello2");
 		System.out.println("hello4");
+		System.out.println("hello5");
 	}
 }
