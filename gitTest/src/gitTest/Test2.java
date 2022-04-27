@@ -6,5 +6,6 @@ public class Test2 {
 		System.out.println("hello운영 업데이트");
 		System.out.println("hello2");
 		System.out.println("hello1");
+//		System.out.println("hello4"); 두번째 충돌 
 	}
 }
